@@ -37,10 +37,12 @@ Item
             right: parent.right
         }
 
-        text: "<p><b>Disclaimer by Ultimaker</b></p>"
-            + "<p>Please read this disclaimer carefully.</p>"
-            + "<p>Except when otherwise stated in writing, Ultimaker provides any Ultimaker software or third party software \"As is\" without warranty of any kind. The entire risk as to the quality and performance of Ultimaker software is with you.</p>"
-            + "<p>Unless required by applicable law or agreed to in writing, in no event will Ultimaker be liable to you for damages, including any general, special, incidental, or consequential damages arising out of the use or inability to use any Ultimaker software or third party software.</p>"
+        text: "<p><b>Dazzle免责声明</b></p>"
+            + "<p>1、本软件用于我司FDM部分型号设备的操作，不对其它能用本软件控制的设备打印质量和安全进行保证。</p>"
+            + "<p>2、设备使用前需要学习操作方法。</p>"
+            + "<p>3、设备由很多的运动部件组成，部分运动部件裸露在外，有一定的风险造成人身或物品的损伤，我司不对设备使用过程承担安全保证。</p>"
+            + "<p>4、设备在使用过程中不要用手、物品阻挡机器部件的运动。</p>"
+            + "<p>5、未成年人在无成年人陪护的情况下不得使用设备。</p>"
         textFormat: Text.RichText
         wrapMode: Text.WordWrap
         font: UM.Theme.getFont("medium")

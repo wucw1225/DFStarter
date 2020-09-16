@@ -198,7 +198,17 @@ UM.MainWindow
                     }
                     GradientStop
                     {
+                        position: 0.4
+                        color: UM.Theme.getColor("main_window_header_background_gradient")
+                    }
+                    GradientStop
+                    {
                         position: 0.5
+                        color: UM.Theme.getColor("main_window_header_background_gradient")
+                    }
+                    GradientStop
+                    {
+                        position: 0.6
                         color: UM.Theme.getColor("main_window_header_background_gradient")
                     }
                     GradientStop

@@ -50,43 +50,43 @@ Item
 
         SettingsMenu { title: catalog.i18nc("@title:menu menubar:toplevel", "&Settings") }
 
-        Menu
-        {
-            id: extensionMenu
-            title: catalog.i18nc("@title:menu menubar:toplevel", "E&xtensions")
-
-            Instantiator
-            {
-                id: extensions
-                model: UM.ExtensionModel { }
-
-                Menu
-                {
-                    id: sub_menu
-                    title: model.name;
-                    visible: actions != null
-                    enabled: actions != null
-                    Instantiator
-                    {
-                        model: actions
-                        Loader
-                        {
-                            property var extensionsModel: extensions.model
-                            property var modelText: model.text
-                            property var extensionName: name
-
-                            sourceComponent: modelText.trim() == "" ? extensionsMenuSeparator : extensionsMenuItem
-                        }
-
-                        onObjectAdded: sub_menu.insertItem(index, object.item)
-                        onObjectRemoved: sub_menu.removeItem(object.item)
-                    }
-                }
-
-                onObjectAdded: extensionMenu.insertItem(index, object)
-                onObjectRemoved: extensionMenu.removeItem(object)
-            }
-        }
+//        Menu
+//        {
+//            id: extensionMenu
+//            title: catalog.i18nc("@title:menu menubar:toplevel", "E&xtensions")
+//
+//            Instantiator
+//            {
+//                id: extensions
+//                model: UM.ExtensionModel { }
+//
+//                Menu
+//                {
+//                    id: sub_menu
+//                    title: model.name;
+//                    visible: actions != null
+//                    enabled: actions != null
+//                    Instantiator
+//                    {
+//                        model: actions
+//                        Loader
+//                        {
+//                            property var extensionsModel: extensions.model
+//                            property var modelText: model.text
+//                            property var extensionName: name
+//
+//                            sourceComponent: modelText.trim() == "" ? extensionsMenuSeparator : extensionsMenuItem
+//                        }
+//
+//                        onObjectAdded: sub_menu.insertItem(index, object.item)
+//                        onObjectRemoved: sub_menu.removeItem(object.item)
+//                    }
+//                }
+//
+//                onObjectAdded: extensionMenu.insertItem(index, object)
+//                onObjectRemoved: extensionMenu.removeItem(object)
+//            }
+//        }
 
         Menu
         {

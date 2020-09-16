@@ -27,6 +27,7 @@ Item
         renderType: Text.NativeRendering
     }
 
+/*
     DropDownWidget
     {
         id: addNetworkPrinterDropDown
@@ -77,22 +78,30 @@ Item
             }
         }
     }
+*/
 
     DropDownWidget
     {
         id: addLocalPrinterDropDown
 
+        /*
         anchors.top: addNetworkPrinterDropDown.bottom
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.topMargin: UM.Theme.getSize("default_margin").height
+        */
+        anchors.top: titleLabel.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.topMargin: UM.Theme.getSize("wide_margin").height
 
         title: catalog.i18nc("@label", "Add a non-networked printer")
 
-        onClicked:
-        {
-            addNetworkPrinterDropDown.contentShown = !contentShown
-        }
+//        onClicked:
+//        {
+//            addNetworkPrinterDropDown.contentShown = !contentShown
+//        }
+        contentShown: true
 
         contentComponent: localPrinterListComponent
 
@@ -135,11 +144,20 @@ Item
         enabled:
         {
             // If the network printer dropdown is expanded, make sure that there is a selected item
+            /*
             if (addNetworkPrinterDropDown.contentShown)
             {
                 return addNetworkPrinterDropDown.contentItem.currentItem != null
             }
             else
+            {
+                // Printer name cannot be empty
+                const localPrinterItem = addLocalPrinterDropDown.contentItem.currentItem
+                const isPrinterNameValid = addLocalPrinterDropDown.contentItem.isPrinterNameValid
+                return localPrinterItem != null && isPrinterNameValid
+            }
+            */
+            if (addLocalPrinterDropDown.contentShown)
             {
                 // Printer name cannot be empty
                 const localPrinterItem = addLocalPrinterDropDown.contentItem.currentItem
@@ -152,6 +170,7 @@ Item
         onClicked:
         {
             // Create a network printer or a local printer according to the selection
+            /*
             if (addNetworkPrinterDropDown.contentShown)
             {
                 // Create a network printer
@@ -165,6 +184,16 @@ Item
             else
             {
                 // Create a local printer
+                const localPrinterItem = addLocalPrinterDropDown.contentItem.currentItem
+                const printerName = addLocalPrinterDropDown.contentItem.printerName
+                if(Cura.MachineManager.addMachine(localPrinterItem.id, printerName))
+                {
+                    base.showNextPage()
+                }
+            }
+            */
+            if (addLocalPrinterDropDown.contentShown)
+            {
                 const localPrinterItem = addLocalPrinterDropDown.contentItem.currentItem
                 const printerName = addLocalPrinterDropDown.contentItem.printerName
                 if(Cura.MachineManager.addMachine(localPrinterItem.id, printerName))

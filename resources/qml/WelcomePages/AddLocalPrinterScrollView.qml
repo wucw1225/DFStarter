@@ -100,7 +100,7 @@ Item
                 model: UM.DefinitionContainersModel
                 {
                     id: machineDefinitionsModel
-                    filter: { "visible": true }
+                    filter: { "visible": true , "manufacturer": "Dazzle"}
                     sectionProperty: "manufacturer"
                     preferredSections: preferredCategories
                 }
@@ -272,6 +272,7 @@ Item
                 {
                     id: printerNameTextField
                     placeholderText: catalog.i18nc("@text", "Please name your printer")
+                    width: 80
                     maximumLength: 40
                     validator: RegExpValidator
                     {

@@ -173,9 +173,9 @@
         "secondary_button_hover": [228, 228, 228, 255],
         "secondary_button_text": [30, 102, 215, 255],
 
-        "main_window_header_background": [8, 7, 63, 255],
-        "main_window_header_background_gradient": [25, 23, 91, 255],
-        "main_window_header_button_text_active": [8, 7, 63, 255],
+        "main_window_header_background": [13, 12, 65, 255],
+        "main_window_header_background_gradient": [80, 97, 185, 255],
+        "main_window_header_button_text_active": [13, 12, 65, 255],
         "main_window_header_button_text_inactive": [255, 255, 255, 255],
         "main_window_header_button_text_hovered": [255, 255, 255, 255],
         "main_window_header_button_background_active": [255, 255, 255, 255],

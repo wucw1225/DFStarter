@@ -5322,17 +5322,17 @@ msgstr "拒绝并关闭"
 
 #: /home/trin/Gedeeld/Projects/Cura/resources/qml/WelcomePages/WelcomeContent.qml:29
 msgctxt "@label"
-msgid "Welcome to Ultimaker Cura"
-msgstr "欢迎使用 Ultimaker Cura"
+msgid "Welcome to Dazzle DFStarter"
+msgstr "欢迎使用 Dazzle DFStarter"
 
 #: /home/trin/Gedeeld/Projects/Cura/resources/qml/WelcomePages/WelcomeContent.qml:47
 msgctxt "@text"
 msgid ""
 "Please follow these steps to set up\n"
-"Ultimaker Cura. This will only take a few moments."
+"Dazzle DFStarter. This will only take a few moments."
 msgstr ""
 "请按照以下步骤设置\n"
-"Ultimaker Cura。此操作只需要几分钟时间。"
+"Dazzle DFStarter。此操作只需要几分钟时间。"
 
 #: /home/trin/Gedeeld/Projects/Cura/resources/qml/WelcomePages/WelcomeContent.qml:58
 msgctxt "@button"

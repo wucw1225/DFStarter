@@ -19,19 +19,32 @@ Item
     implicitHeight: UM.Theme.getSize("main_window_header").height
     implicitWidth: UM.Theme.getSize("main_window_header").width
 
-    Image
-    {
-        id: logo
-        anchors.left: parent.left
-        anchors.leftMargin: UM.Theme.getSize("default_margin").width
-        anchors.verticalCenter: parent.verticalCenter
+//    Image
+//    {
+//        id: logo
+//        anchors.left: parent.left
+//        anchors.leftMargin: UM.Theme.getSize("default_margin").width
+//        anchors.verticalCenter: parent.verticalCenter
+//
+//        source: UM.Theme.getImage("logo")
+//        width: UM.Theme.getSize("logo").width
+//        height: UM.Theme.getSize("logo").height
+//        fillMode: Image.PreserveAspectFit
+//        sourceSize.width: width
+//        sourceSize.height: height
+//    }
 
-        source: UM.Theme.getImage("logo")
-        width: UM.Theme.getSize("logo").width
-        height: UM.Theme.getSize("logo").height
-        fillMode: Image.PreserveAspectFit
-        sourceSize.width: width
-        sourceSize.height: height
+// 公司logo
+    Text
+    {
+        text: "DAZZLE"
+        anchors.left: parent.left
+        anchors.leftMargin: 20
+        anchors.verticalCenter: parent.verticalCenter
+        font.family: "Microsoft YaHei"
+        font.italic: true
+        font.pointSize: 21
+        color: "white"
     }
 
     Row
@@ -83,6 +96,7 @@ Item
         ExclusiveGroup { id: mainWindowHeaderMenuGroup }
     }
 
+/*
     // Shortcut button to quick access the Toolbox
     Controls2.Button
     {
@@ -149,4 +163,5 @@ Item
             rightMargin: UM.Theme.getSize("default_margin").width
         }
     }
+*/
 }
