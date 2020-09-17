@@ -37,6 +37,11 @@ Item
             id: curaImage
             anchors.horizontalCenter: parent.horizontalCenter
             source: UM.Theme.getImage("first_run_welcome_cura")
+            width: 160
+            height: 80
+            fillMode: Image.PreserveAspectFit // 按比例缩放不裁剪
+            sourceSize.width: width
+            sourceSize.height: height
         }
 
         Label

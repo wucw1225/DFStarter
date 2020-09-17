@@ -1,7 +1,7 @@
 {
     "metadata": {
-        "name": "Ultimaker Dark",
-        "inherits": "cura-light"
+        "name": "Dark",
+        "inherits": "Light"
     },
 
     "colors": {

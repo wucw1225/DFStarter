@@ -146,6 +146,7 @@ UM.PreferencesPage
                 {
                     id: languageLabel
                     text: "Language:" //Don't translate this, to make it easier to find the language drop-down if you can't read the current language.
+                    //text: catalog.i18nc("@label", "Language:")
                 }
 
                 ComboBox
@@ -567,12 +568,12 @@ UM.PreferencesPage
             {
                 width: childrenRect.width
                 height: childrenRect.height
-                text: catalog.i18nc("@info:tooltip","Should opening files from the desktop or external applications open in the same instance of Cura?")
+                text: catalog.i18nc("@info:tooltip","Should opening files from the desktop or external applications open in the same instance of DFStarter?")
 
                 CheckBox
                 {
                     id: singleInstanceCheckbox
-                    text: catalog.i18nc("@option:check","Use a single instance of Cura")
+                    text: catalog.i18nc("@option:check","Use a single instance of DFStarter")
                     checked: boolCheck(UM.Preferences.getValue("cura/single_instance"))
                     onCheckedChanged: UM.Preferences.setValue("cura/single_instance", checked)
                 }
@@ -776,53 +777,55 @@ UM.PreferencesPage
                 width: UM.Theme.getSize("default_margin").height
             }
 
-            Label
-            {
-                font.bold: true
-                visible: checkUpdatesCheckbox.visible || sendDataCheckbox.visible
-                text: catalog.i18nc("@label","Privacy")
-            }
-
-            UM.TooltipArea
-            {
-                width: childrenRect.width
-                height: visible ? childrenRect.height : 0
-                text: catalog.i18nc("@info:tooltip","Should Cura check for updates when the program is started?")
-
-                CheckBox
-                {
-                    id: checkUpdatesCheckbox
-                    text: catalog.i18nc("@option:check","Check for updates on start")
-                    checked: boolCheck(UM.Preferences.getValue("info/automatic_update_check"))
-                    onCheckedChanged: UM.Preferences.setValue("info/automatic_update_check", checked)
-                }
-            }
-
-            UM.TooltipArea
-            {
-                width: childrenRect.width
-                height: visible ? childrenRect.height : 0
-                text: catalog.i18nc("@info:tooltip","Should anonymous data about your print be sent to Ultimaker? Note, no models, IP addresses or other personally identifiable information is sent or stored.")
-
-                CheckBox
-                {
-                    id: sendDataCheckbox
-                    text: catalog.i18nc("@option:check","Send (anonymous) print information")
-                    checked: boolCheck(UM.Preferences.getValue("info/send_slice_info"))
-                    onCheckedChanged: UM.Preferences.setValue("info/send_slice_info", checked)
-                }
-
-                Button
-                {
-                    id: showMoreInfo
-                    anchors.top: sendDataCheckbox.bottom
-                    text: catalog.i18nc("@action:button", "More information")
-                    onClicked:
-                    {
-                        CuraApplication.showMoreInformationDialogForAnonymousDataCollection();
-                    }
-                }
-            }
+// 屏蔽隐私部分
+//            Label
+//            {
+//                font.bold: true
+//                visible: checkUpdatesCheckbox.visible || sendDataCheckbox.visible
+//                text: catalog.i18nc("@label","Privacy")
+//            }
+//
+//            UM.TooltipArea
+//            {
+//                width: childrenRect.width
+//                height: visible ? childrenRect.height : 0
+//                text: catalog.i18nc("@info:tooltip","Should Cura check for updates when the program is started?")
+//
+//                CheckBox
+//                {
+//                    id: checkUpdatesCheckbox
+//                    text: catalog.i18nc("@option:check","Check for updates on start")
+//                    //checked: boolCheck(UM.Preferences.getValue("info/automatic_update_check"))
+//                    checked: false
+//                    onCheckedChanged: UM.Preferences.setValue("info/automatic_update_check", checked)
+//                }
+//            }
+//
+//            UM.TooltipArea
+//            {
+//                width: childrenRect.width
+//                height: visible ? childrenRect.height : 0
+//                text: catalog.i18nc("@info:tooltip","Should anonymous data about your print be sent to Ultimaker? Note, no models, IP addresses or other personally identifiable information is sent or stored.")
+//
+//                CheckBox
+//                {
+//                    id: sendDataCheckbox
+//                    text: catalog.i18nc("@option:check","Send (anonymous) print information")
+//                    checked: boolCheck(UM.Preferences.getValue("info/send_slice_info"))
+//                    onCheckedChanged: UM.Preferences.setValue("info/send_slice_info", checked)
+//                }
+//
+//                Button
+//                {
+//                    id: showMoreInfo
+//                    anchors.top: sendDataCheckbox.bottom
+//                    text: catalog.i18nc("@action:button", "More information")
+//                    onClicked:
+//                    {
+//                        CuraApplication.showMoreInformationDialogForAnonymousDataCollection();
+//                    }
+//                }
+//            }
 
             /* Multi-buildplate functionality is disabled because it's broken. See CURA-4975 for the ticket to remove it.
             Item

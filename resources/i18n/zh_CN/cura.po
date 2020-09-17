@@ -3284,8 +3284,8 @@ msgstr "右视图"
 
 #: /home/trin/Gedeeld/Projects/Cura/resources/qml/Actions.qml:167
 msgctxt "@action:inmenu"
-msgid "Configure Cura..."
-msgstr "配置 Cura..."
+msgid "Configure DFStarter..."
+msgstr "配置 DFStarter..."
 
 #: /home/trin/Gedeeld/Projects/Cura/resources/qml/Actions.qml:174
 msgctxt "@action:inmenu menubar:printer"
@@ -4145,7 +4145,7 @@ msgstr "主题："
 #: /home/trin/Gedeeld/Projects/Cura/resources/qml/Preferences/GeneralPage.qml:285
 msgctxt "@label"
 msgid "You will need to restart the application for these changes to have effect."
-msgstr "需重新启动 Cura，新的设置才能生效。"
+msgstr "需重新启动 DFStarter，新的设置才能生效。"
 
 #: /home/trin/Gedeeld/Projects/Cura/resources/qml/Preferences/GeneralPage.qml:302
 msgctxt "@info:tooltip"
@@ -4292,13 +4292,13 @@ msgstr "打开并保存文件"
 
 #: /home/trin/Gedeeld/Projects/Cura/resources/qml/Preferences/GeneralPage.qml:570
 msgctxt "@info:tooltip"
-msgid "Should opening files from the desktop or external applications open in the same instance of Cura?"
-msgstr "应从桌面打开文件还是在同一 Cura 实例中打开外部应用程序？"
+msgid "Should opening files from the desktop or external applications open in the same instance of DFStarter?"
+msgstr "应从桌面打开文件还是在同一 DFStarter 实例中打开外部应用程序？"
 
 #: /home/trin/Gedeeld/Projects/Cura/resources/qml/Preferences/GeneralPage.qml:575
 msgctxt "@option:check"
-msgid "Use a single instance of Cura"
-msgstr "使用单个 Cura 实例"
+msgid "Use a single instance of DFStarter"
+msgstr "使用单个 DFStarter 实例"
 
 #: /home/trin/Gedeeld/Projects/Cura/resources/qml/Preferences/GeneralPage.qml:585
 msgctxt "@info:tooltip"

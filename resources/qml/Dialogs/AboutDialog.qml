@@ -15,7 +15,8 @@ UM.Dialog
     title: catalog.i18nc("@title:window The argument is the application name.", "About %1").arg(CuraApplication.applicationDisplayName)
 
     minimumWidth: 500 * screenScaleFactor
-    minimumHeight: 650 * screenScaleFactor
+    //minimumHeight: 650 * screenScaleFactor
+    minimumHeight: 200 * screenScaleFactor
     width: minimumWidth
     height: minimumHeight
 
@@ -33,6 +34,7 @@ UM.Dialog
 
         color: UM.Theme.getColor("main_window_header_background")
 
+/*
         Image
         {
             id: logo
@@ -49,6 +51,19 @@ UM.Dialog
 
             UM.I18nCatalog{id: catalog; name: "cura"}
         }
+*/
+        Text
+        {
+            id: dazzlelogo
+            text: "DAZZLE  DFStarter"
+            anchors.top: parent.top
+            anchors.topMargin: parent.topPadding
+            anchors.horizontalCenter: parent.horizontalCenter
+            font.family: "Microsoft YaHei"
+            font.italic: true
+            font.pointSize: 21
+            color: "white"
+        }
 
         Label
         {
@@ -57,8 +72,11 @@ UM.Dialog
             text: catalog.i18nc("@label","version: %1").arg(UM.Application.version)
             font: UM.Theme.getFont("large_bold")
             color: UM.Theme.getColor("button_text")
-            anchors.right : logo.right
-            anchors.top: logo.bottom
+//            anchors.right : logo.right
+//            anchors.top: logo.bottom
+//            anchors.topMargin: (UM.Theme.getSize("default_margin").height / 2) | 0
+            anchors.right : dazzlelogo.right
+            anchors.top: dazzlelogo.bottom
             anchors.topMargin: (UM.Theme.getSize("default_margin").height / 2) | 0
         }
     }
@@ -76,6 +94,7 @@ UM.Dialog
         anchors.topMargin: UM.Theme.getSize("default_margin").height
     }
 
+/*
     Label
     {
         id: creditsNotes
@@ -88,7 +107,9 @@ UM.Dialog
         anchors.top: description.bottom
         anchors.topMargin: UM.Theme.getSize("default_margin").height
     }
+*/
 
+/* 屏蔽使用的开源项目列表
     ScrollView
     {
         id: credits
@@ -163,6 +184,7 @@ UM.Dialog
             }
         }
     }
+*/
 
     rightButtons: Button
     {
