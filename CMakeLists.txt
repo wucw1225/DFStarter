@@ -18,8 +18,8 @@ endif()
 
 option(GENERATE_TRANSLATIONS "Should the translations be generated?" ON)
 
-set(CURA_APP_NAME "cura" CACHE STRING "Short name of Cura, used for configuration folder")
-set(CURA_APP_DISPLAY_NAME "Ultimaker Cura" CACHE STRING "Display name of Cura")
+set(CURA_APP_NAME "DFStarter" CACHE STRING "Short name of Cura, used for configuration folder")
+set(CURA_APP_DISPLAY_NAME "Dazzle DFStarter" CACHE STRING "Display name of Cura")
 set(CURA_VERSION "master" CACHE STRING "Version name of Cura")
 set(CURA_BUILDTYPE "" CACHE STRING "Build type of Cura, eg. 'PPA'")
 set(CURA_CLOUD_API_ROOT "" CACHE STRING "Alternative Cura cloud API root")
@@ -61,6 +61,10 @@ endif()
 
 install(DIRECTORY resources
         DESTINATION ${CMAKE_INSTALL_DATADIR}/cura)
+###
+#install(DIRECTORY resources
+#        DESTINATION ${CMAKE_INSTALL_DATADIR}/DFStarter)
+### modify by wucw
 
 include(CuraPluginInstall)
 
@@ -69,6 +73,9 @@ if(NOT APPLE AND NOT WIN32)
             DESTINATION ${CMAKE_INSTALL_BINDIR}
             PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE
             RENAME cura)
+###
+#			RENAME DFStarter)
+### modify by wucw
     if(EXISTS /etc/debian_version)
         install(DIRECTORY cura
             DESTINATION lib${LIB_SUFFIX}/python${Python3_VERSION_MAJOR}/dist-packages
