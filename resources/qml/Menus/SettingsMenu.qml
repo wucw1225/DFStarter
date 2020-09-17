@@ -24,15 +24,15 @@ Menu
             title: modelData.name
             property var extruder: (base.activeMachine === null) ? null : activeMachine.extruderList[model.index]
             NozzleMenu { title: Cura.MachineManager.activeDefinitionVariantsName; visible: Cura.MachineManager.activeMachine.hasVariants; extruderIndex: index }
-            MaterialMenu
-            {
-                title: catalog.i18nc("@title:menu", "&Material")
-                visible: Cura.MachineManager.activeMachine.hasMaterials
-                extruderIndex: index
-                updateModels: false
-                onAboutToShow: updateModels = true
-                onAboutToHide: updateModels = false
-            }
+//            MaterialMenu
+//            {
+//                title: catalog.i18nc("@title:menu", "&Material")
+//                visible: Cura.MachineManager.activeMachine.hasMaterials
+//                extruderIndex: index
+//                updateModels: false
+//                onAboutToShow: updateModels = true
+//                onAboutToHide: updateModels = false
+//            }
 
             MenuSeparator
             {
