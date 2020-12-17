@@ -189,13 +189,13 @@ Item
     }
 
     // Show the Marketplace dialog at the materials tab
-    Connections
-    {
-        target: Cura.Actions.marketplaceMaterials
-        onTriggered:
-        {
-            curaExtensions.callExtensionMethod("Toolbox", "launch")
-            curaExtensions.callExtensionMethod("Toolbox", "setViewCategoryToMaterials")
-        }
-    }
+//    Connections
+//    {
+//        target: Cura.Actions.marketplaceMaterials
+//        onTriggered:
+//        {
+//            curaExtensions.callExtensionMethod("Toolbox", "launch")
+//            curaExtensions.callExtensionMethod("Toolbox", "setViewCategoryToMaterials")
+//        }
+//    }
 }

@@ -161,29 +161,29 @@ Item
         }
 
         // Import button
-        Button
-        {
-            id: importMenuButton
-            text: catalog.i18nc("@action:button", "Import")
-            iconName: "document-import"
-            onClicked:
-            {
-                importDialog.open();
-            }
-        }
+//        Button
+//        {
+//            id: importMenuButton
+//            text: catalog.i18nc("@action:button", "Import")
+//            iconName: "document-import"
+//            onClicked:
+//            {
+//                importDialog.open();
+//            }
+//        }
 
         // Export button
-        Button
-        {
-            id: exportMenuButton
-            text: catalog.i18nc("@action:button", "Export")
-            iconName: "document-export"
-            enabled: base.hasCurrentItem && !base.currentItem.is_read_only
-            onClicked:
-            {
-                exportDialog.open();
-            }
-        }
+//        Button
+//        {
+//            id: exportMenuButton
+//            text: catalog.i18nc("@action:button", "Export")
+//            iconName: "document-export"
+//            enabled: base.hasCurrentItem && !base.currentItem.is_read_only
+//            onClicked:
+//            {
+//                exportDialog.open();
+//            }
+//        }
     }
 
     // Click create profile from ... in Profile context menu

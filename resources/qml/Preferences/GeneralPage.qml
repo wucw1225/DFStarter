@@ -27,16 +27,16 @@ UM.PreferencesPage
         }
     }
 
-    function setDefaultTheme(defaultThemeCode)
-    {
-        for(var i = 0; i < themeList.count; i++)
-        {
-            if (themeComboBox.model.get(i).code == defaultThemeCode)
-            {
-                themeComboBox.currentIndex = i
-            }
-        }
-    }
+//    function setDefaultTheme(defaultThemeCode)
+//    {
+//        for(var i = 0; i < themeList.count; i++)
+//        {
+//            if (themeComboBox.model.get(i).code == defaultThemeCode)
+//            {
+//                themeComboBox.currentIndex = i
+//            }
+//        }
+//    }
 
     function setDefaultDiscardOrKeepProfile(code)
     {
@@ -68,9 +68,9 @@ UM.PreferencesPage
         var defaultLanguage = UM.Preferences.getValue("general/language")
         setDefaultLanguage(defaultLanguage)
 
-        UM.Preferences.resetPreference("general/theme")
-        var defaultTheme = UM.Preferences.getValue("general/theme")
-        setDefaultTheme(defaultTheme)
+//        UM.Preferences.resetPreference("general/theme")
+//        var defaultTheme = UM.Preferences.getValue("general/theme")
+//        setDefaultTheme(defaultTheme)
 
         UM.Preferences.resetPreference("cura/single_instance")
         singleInstanceCheckbox.checked = boolCheck(UM.Preferences.getValue("cura/single_instance"))
@@ -116,6 +116,8 @@ UM.PreferencesPage
         sendDataCheckbox.checked = boolCheck(UM.Preferences.getValue("info/send_slice_info"))
         UM.Preferences.resetPreference("info/automatic_update_check")
         checkUpdatesCheckbox.checked = boolCheck(UM.Preferences.getValue("info/automatic_update_check"))
+
+
     }
 
     ScrollView
@@ -224,58 +226,58 @@ UM.PreferencesPage
                     onTextChanged: UM.Preferences.setValue("cura/currency", text)
                 }
 
-                Label
-                {
-                    id: themeLabel
-                    text: catalog.i18nc("@label","Theme:")
-                }
+//                Label
+//                {
+//                    id: themeLabel
+//                    text: catalog.i18nc("@label","Theme:")
+//                }
 
-                ComboBox
-                {
-                    id: themeComboBox
-
-                    model: ListModel
-                    {
-                        id: themeList
-
-                        Component.onCompleted: {
-                            var themes = UM.Theme.getThemes()
-                            for (var i = 0; i < themes.length; i++)
-                            {
-                                append({ text: themes[i].name.toString(), code: themes[i].id.toString() });
-                            }
-                        }
-                    }
-
-                    currentIndex:
-                    {
-                        var code = UM.Preferences.getValue("general/theme");
-                        for(var i = 0; i < themeList.count; ++i)
-                        {
-                            if(model.get(i).code == code)
-                            {
-                                return i
-                            }
-                        }
-                        return 0;
-                    }
-                    onActivated: UM.Preferences.setValue("general/theme", model.get(index).code)
-
-                    Component.onCompleted:
-                    {
-                        // Because ListModel is stupid and does not allow using qsTr() for values.
-                        for(var i = 0; i < themeList.count; ++i)
-                        {
-                            themeList.setProperty(i, "text", catalog.i18n(themeList.get(i).text));
-                        }
-
-                        // Glorious hack time. ComboBox does not update the text properly after changing the
-                        // model. So change the indices around to force it to update.
-                        currentIndex += 1;
-                        currentIndex -= 1;
-                    }
-
-                }
+//                ComboBox
+//                {
+//                    id: themeComboBox
+//
+//                    model: ListModel
+//                    {
+//                        id: themeList
+//
+//                        Component.onCompleted: {
+//                            var themes = UM.Theme.getThemes()
+//                            for (var i = 0; i < themes.length; i++)
+//                            {
+//                                append({ text: themes[i].name.toString(), code: themes[i].id.toString() });
+//                            }
+//                        }
+//                    }
+//
+//                    currentIndex:
+//                    {
+//                        var code = UM.Preferences.getValue("general/theme");
+//                        for(var i = 0; i < themeList.count; ++i)
+//                        {
+//                            if(model.get(i).code == code)
+//                            {
+//                                return i
+//                            }
+//                        }
+//                        return 0;
+//                    }
+//                    onActivated: UM.Preferences.setValue("general/theme", model.get(index).code)
+//
+//                    Component.onCompleted:
+//                    {
+//                        // Because ListModel is stupid and does not allow using qsTr() for values.
+//                        for(var i = 0; i < themeList.count; ++i)
+//                        {
+//                            themeList.setProperty(i, "text", catalog.i18n(themeList.get(i).text));
+//                        }
+//
+//                        // Glorious hack time. ComboBox does not update the text properly after changing the
+//                        // model. So change the indices around to force it to update.
+//                        currentIndex += 1;
+//                        currentIndex -= 1;
+//                    }
+//
+//                }
             }
 
             Label

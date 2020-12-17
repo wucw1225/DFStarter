@@ -71,7 +71,7 @@ UM.Dialog
             Label
             {
                 id: titleLabel
-                text: catalog.i18nc("@action:title", "Summary - Cura Project")
+                text: catalog.i18nc("@action:title", "Summary - DFStarter Project")
                 font.pointSize: 18
             }
             Rectangle

@@ -160,8 +160,8 @@ Menu
 
     MenuSeparator {}
 
-    MenuItem
-    {
-        action: Cura.Actions.marketplaceMaterials
-    }
+//    MenuItem
+//    {
+//        action: Cura.Actions.marketplaceMaterials
+//    }
 }
