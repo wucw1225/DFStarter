@@ -10,8 +10,8 @@ def getMetaData():
     return {
         "profile_writer": [
             {
-                "extension": "curaprofile",
-                "description": catalog.i18nc("@item:inlistbox", "Cura Profile")
+                "extension": "DFStarterprofile",
+                "description": catalog.i18nc("@item:inlistbox", "DFStarter Profile")
             }
         ]
     }
